@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: wanip
+Version: 0.1.1
+Summary: Simple tool to print current WAN/Public IP using ipify
+Requires-Python: >=3.9
+Requires-Dist: httpx

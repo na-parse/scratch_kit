@@ -1,0 +1,28 @@
+# mortgage calculator
+
+def get_interest(outstanding,interest_rate,days_per_month):
+	interest = outstanding * (interest_rate / 365) * days_per_month
+	return round(interest,2)
+
+
+### SET CURRENT LOAN VALUES
+outstanding = 0  # enter current outstanding principal
+monthly_payment = 0 # enter your current monthly payment
+interest_rate = 0.0375 # Interest rate (as percent)
+escrow = 500 # Escrow payment
+add_payment_monthly = 1000 # Additional monthly principal payment
+
+days_per_month = 30.4 # I'm skipping annoying datetime stuff sue me
+
+working_principal = outstanding
+months_counter = 0
+while working_principal > 0:
+	months_interest = get_interest(working_principal,interest_rate,days_per_month)
+	applied_principal = monthly_payment - escrow - months_interest
+	if float(add_payment_monthly) > 0:
+		applied_principal += add_payment_monthly
+	applied_principal = round(applied_principal,2)
+	months_counter += 1
+	new_principal = round(working_principal - applied_principal,2)
+	print(f'[Month: {str(months_counter).rjust(3)}]\tP: {working_principal}\tI: {months_interest}\tpaid {applied_principal}')
+	working_principal = new_principal

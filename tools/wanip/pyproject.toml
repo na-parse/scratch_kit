@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wanip"
+version = "0.1.1"
+description = "Simple tool to print current WAN/Public IP using ipify"
+requires-python = ">=3.9"
+dependencies = ["httpx"]
+
+[project.scripts]
+wanip = "wanip.cli:main"
