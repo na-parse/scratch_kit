@@ -1,3 +1,3 @@
-# nathan is dumb
+# install + venv test
 
-This is a readme for nathan, the dummy
+Testing development using package style python deployments.  Claude helped me with this.
