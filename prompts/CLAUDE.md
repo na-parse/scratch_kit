@@ -41,8 +41,10 @@ Do not wait to be told to update memory.
 # Repo Management - Git
 
 - Never initialize a fresh project as a git repo unless asked to
+- Your memory files MUST ALWAYS be in the .gitignore
 - Never work on main, suggest a branch before starting work
 - NEVER mention a `co-authored-by` or similar; No generation tool references
+
 
 ## Commits
 
